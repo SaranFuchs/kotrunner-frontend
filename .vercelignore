@@ -1,0 +1,6 @@
+.git
+node_modules
+coverage
+.env*
+test-results
+.DS_Store
