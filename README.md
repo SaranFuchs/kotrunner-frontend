@@ -4,6 +4,8 @@ React + Vite, JavaScript. A category-first Kotlin practice interface with 90
 original exercises, a CodeMirror editor, one Go button, visible results, aggregate
 hidden results, optional hints, and successful-solution persistence.
 
+Live application: https://kotrunner-frontend.vercel.app
+
 ## Local development
 
 Use Node 24 LTS or newer and npm. From this directory:
@@ -51,8 +53,8 @@ https://github.com/SaranFuchs/kotrunner-backend/blob/main/docs/API.md
 
 `nginx.conf` serves the built SPA, applies browser security headers, and proxies
 same-origin `/api` to the backend. The backend needs the exact frontend Origin in
-its allowlist. Production requires a verified HTTPS API route; a static-only
-frontend deployment does not satisfy the complete KotRunner requirements.
+its allowlist. The deployed Vercel frontend proxies `/api` to the Ktor container
+at https://kotrunner-backend.vercel.app; account cookies remain same-origin.
 
 See the backend `DEPLOYMENT.md` and `ACCEPTANCE.md` for current hosted acceptance.
 Neither secrets nor hidden fixtures/oracles may be committed to this repository.
